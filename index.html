@@ -151,13 +151,34 @@
             font-family: 'Playfair Display', serif;
         }
 
-        .review {
-            margin-bottom: 20px;
+        .reviews-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .review-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 45%;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .review-card img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .review-card p {
+            font-size: 1rem;
+            color: #333;
             font-style: italic;
-            font-size: 1.2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         /* Footer */
@@ -194,6 +215,10 @@
 
             section.services {
                 padding: 80px 5%;
+            }
+
+            .reviews-container {
+                flex-direction: column;
             }
         }
     </style>
@@ -243,8 +268,16 @@
     <!-- Customer Reviews Section -->
     <section id="reviews" class="customer-reviews">
         <h2>お客様の声</h2>
-        <p class="review">「LY税理士事務所のサポートにより、税務問題が迅速に解決しました。今後ともお願いしたいです。」 - A社</p>
-        <p class="review">「信頼できるアドバイザーとして、事業計画の立て直しをサポートしていただきました。」 - B社</p>
+        <div class="reviews-container">
+            <div class="review-card">
+                <img src="https://via.placeholder.com/70" alt="Customer 1">
+                <p>「LY税理士事務所のサポートにより、税務問題が迅速に解決しました。今後ともお願いしたいです。」 - A社</p>
+            </div>
+            <div class="review-card">
+                <img src="https://via.placeholder.com/70" alt="Customer 2">
+                <p>「信頼できるアドバイザーとして、事業計画の立て直しをサポートしていただきました。」 - B社</p>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
