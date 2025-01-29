@@ -95,50 +95,36 @@
         }
 
         /* Service Section */
+
         section.services {
             background-color: #fff;
             padding: 60px 10%;
             text-align: center;
         }
-
-        section.services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
+        
+        /* サービスカードの行を追加 */
+        .service-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
         }
-
-        section.services p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
+        
+        /* サービスカード */
         .service-card {
             background-color: #f4f4f4;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
-            margin: 20px;
-            width: 22%; /* サービスカードを4つ並べるために調整 */
-            display: inline-block;
+            width: 48%; /* 50%の幅でカードを並べる */
             text-align: left;
         }
-
+        
         .service-card:hover {
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
         }
-
-        .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            color: #555;
-        }
+        
+        
 
         /* Customer Reviews Section */
         .customer-reviews {
@@ -264,10 +250,12 @@
     </section>
 
     <!-- Service Section -->
-    <section id="services" class="services">
-        <h2>提供するサービス</h2>
-        <p>私たちのサービスは、税務、会計、事業戦略の構築に至るまで、多岐にわたります。以下のサービスをご確認ください。</p>
+   <!-- Service Section -->
+<section id="services" class="services">
+    <h2>提供するサービス</h2>
+    <p>私たちのサービスは、税務、会計、事業戦略の構築に至るまで、多岐にわたります。以下のサービスをご確認ください。</p>
 
+    <div class="service-row">
         <div class="service-card">
             <h3>税務相談</h3>
             <p>税務に関する問題を解決し、最適な節税対策を提案します。</p>
@@ -277,7 +265,9 @@
             <h3>会計・経理支援</h3>
             <p>正確な会計処理と経理支援で、ビジネスの成長をサポートします。</p>
         </div>
+    </div>
 
+    <div class="service-row">
         <div class="service-card">
             <h3>事業戦略立案</h3>
             <p>事業の成長を促進するための戦略立案を行います。</p>
@@ -287,7 +277,8 @@
             <h3>節税支援</h3>
             <p>効果的な節税対策で、税負担を軽減するお手伝いをします。</p>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Customer Reviews Section -->
     <section id="reviews" class="customer-reviews">
