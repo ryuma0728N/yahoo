@@ -47,13 +47,13 @@
         }
 
         header nav a:hover {
-            background-color: #002244;
+            background-color: #ffcc00;
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: url('https://media.istockphoto.com/id/1461586589/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E4%BC%9A%E8%AD%B0%E3%81%A7%E8%AA%AC%E6%98%8E%E3%82%92%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%E6%89%8B.jpg?s=612x612&w=0&k=20&c=lO7fJR9rgepMtsWrv-Xr3F38HV2HSFyfu2nax7LpN8U=') no-repeat center center/cover;
+            background: url('https://media.istockphoto.com/id/1461586589/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E4%BC%9A%E8%AD%B0%E3%81%A7%E8%AA%AC%E6%98%8E%E3%82%92%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%E6%89%8B.jpg?s=612x612&w=0&k=20&c=lO7fJR9rgepMtsWrv-Xr3F38HV2HSFyfu2nax7LpN8U=') no-repeat center center/cover; /* 画像URLを入れてください */
             color: #fff;
             text-align: center;
             display: flex;
@@ -114,21 +114,15 @@
             margin: 0 auto;
         }
 
-        /* サービスカードの行を追加 */
-        .service-row {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 30px;
-        }
-
-        /* サービスカード */
         .service-card {
             background-color: #f4f4f4;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
-            width: 48%; /* 50%の幅でカードを並べる */
+            margin: 20px;
+            width: 22%; /* サービスカードを4つ並べるために調整 */
+            display: inline-block;
             text-align: left;
         }
 
@@ -232,10 +226,6 @@
                 padding: 80px 5%;
             }
 
-            .service-row {
-                flex-direction: column; /* モバイル時に縦並び */
-            }
-
             .service-card {
                 width: 100%; /* モバイル時にカードが縦に並ぶように */
                 margin-bottom: 20px;
@@ -278,18 +268,38 @@
         <h2>提供するサービス</h2>
         <p>私たちのサービスは、税務、会計、事業戦略の構築に至るまで、多岐にわたります。以下のサービスをご確認ください。</p>
 
-        <div class="service-row">
-            <div class="service-card">
-                <h3>税務相談</h3>
-                <p>税務に関する問題を解決し、最適な節税対策を提案します。</p>
-            </div>
-
-            <div class="service-card">
-                <h3>会計・経理支援</h3>
-                <p>正確な会計処理と経理支援で、ビジネスの成長をサポートします。</p>
-            </div>
+        <div class="service-card">
+            <h3>税務相談</h3>
+            <p>税務に関する問題を解決し、最適な節税対策を提案します。</p>
         </div>
 
-        <div class="service-row">
-            <div class="service-card">
-                <h3>事業戦略立案</h3>
+        <div class="service-card">
+            <h3>会計・経理支援</h3>
+            <p>正確な会計処理と経理支援で、ビジネスの成長をサポートします。</p>
+        </div>
+
+        <div class="service-card">
+            <h3>事業戦略立案</h3>
+            <p>事業の成長を促進するための戦略立案を行います。</p>
+        </div>
+
+        <div class="service-card">
+            <h3>節税支援</h3>
+            <p>効果的な節税対策で、税負担を軽減するお手伝いをします。</p>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="customer-reviews">
+        <h2>お客様の声</h2>
+
+        <div class="customer-review-card">
+            <!-- 顧客1のレビュー -->
+            <div class="review-card">
+                <img src="https://media.istockphoto.com/id/155145019/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E3%82%B7%E3%83%8B%E3%82%A2-exectutive.jpg?s=612x612&w=0&k=20&c=fzM_ey6kPhs0dGsXPV_IcAiraRj6yUzDc9doHxES17o=" alt="顧客Aの画像">         
+                <p>「LY税理士事務所のサポートにより、税務問題が迅速に解決しました。今後ともお願いしたいです。」 - A社</p>
+            </div>
+
+            <!-- 顧客2のレビュー -->
+            <div class="review-card">
+                <img src="https://media.istockphoto.com/id/1469156417/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E5%BD%B9%E5%93%A1%E5%AE%A4%E3%81%A7%E7%AC%91%E9%A1%94%E3%81%AE%E4%BC%81%E6%A5%AD%E5%B9%B9%E
