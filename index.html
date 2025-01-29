@@ -115,12 +115,15 @@
         }
 
         .service-card {
-            margin-top: 40px;
             background-color: #f4f4f4;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
             transition: box-shadow 0.3s ease;
+            margin: 20px;
+            width: 30%;
+            display: inline-block;
+            text-align: left;
         }
 
         .service-card:hover {
@@ -223,6 +226,11 @@
                 padding: 80px 5%;
             }
 
+            .service-card {
+                width: 100%; /* モバイル時にカードが縦に並ぶように */
+                margin-bottom: 20px;
+            }
+
             .customer-review-card {
                 flex-direction: column;
             }
@@ -253,6 +261,27 @@
         <h1>信頼の税理士事務所へようこそ</h1>
         <p>私たちの専門知識と経験を活かし、あなたのビジネスをサポートします。</p>
         <a href="#services" class="cta-button">サービスを見る</a>
+    </section>
+
+    <!-- Service Section -->
+    <section id="services" class="services">
+        <h2>提供するサービス</h2>
+        <p>私たちのサービスは、税務、会計、事業戦略の構築に至るまで、多岐にわたります。以下のサービスをご確認ください。</p>
+
+        <div class="service-card">
+            <h3>税務相談</h3>
+            <p>税務に関する問題を解決し、最適な節税対策を提案します。</p>
+        </div>
+
+        <div class="service-card">
+            <h3>会計・経理支援</h3>
+            <p>正確な会計処理と経理支援で、ビジネスの成長をサポートします。</p>
+        </div>
+
+        <div class="service-card">
+            <h3>事業戦略立案</h3>
+            <p>事業の成長を促進するための戦略立案を行います。</p>
+        </div>
     </section>
 
     <!-- Customer Reviews Section -->
