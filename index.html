@@ -16,6 +16,7 @@
             font-family: 'Roboto', sans-serif;
             color: #333;
             background-color: #f7f7f7;
+            line-height: 1.6;
         }
 
         /* Header */
@@ -79,4 +80,177 @@
 
         .cta-button {
             background-color: #ffcc00;
-       
+            color: #003366;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e6b800;
+        }
+
+        /* Service Section */
+        section.services {
+            background-color: #fff;
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        section.services h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        section.services p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            margin-top: 40px;
+            background-color: #f4f4f4;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* Customer Reviews Section */
+        .customer-reviews {
+            background-color: #003366;
+            color: #fff;
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .customer-reviews h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .review {
+            margin-bottom: 20px;
+            font-style: italic;
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer p {
+            margin-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-button {
+                font-size: 16px;
+            }
+
+            section.services {
+                padding: 80px 5%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">ホーム</a></li>
+                <li><a href="#services">サービス</a></li>
+                <li><a href="#reviews">お客様の声</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>あなたのビジネスを次のステージへ</h1>
+        <p>私たちは革新と信頼を基に、最先端のソリューションを提供し、企業の成長をサポートします。</p>
+        <a href="#services" class="cta-button">サービスを見る</a>
+    </section>
+
+    <!-- Service Section -->
+    <section id="services" class="services">
+        <h2>私たちのサービス</h2>
+        <p>私たちは、クライアントのニーズに合わせた最適なソリューションを提供し、ビジネスの成長を支援します。最新のテクノロジーと豊富な経験を活かして、実績あるサービスを提供しています。</p>
+
+        <div class="service-card">
+            <h3>コンサルティングサービス</h3>
+            <p>業界のリーダーとともに、ビジネスの課題解決を支援します。企業の目標に合わせた戦略的アドバイスを提供。</p>
+        </div>
+
+        <div class="service-card">
+            <h3>デジタルソリューション</h3>
+            <p>最新のテクノロジーを駆使して、業務効率化やデジタル化をサポート。企業の成長を加速させます。</p>
+        </div>
+
+        <div class="service-card">
+            <h3>マネジメント支援</h3>
+            <p>ビジネス戦略の策定から実行まで、全てをサポート。経営の現場に強いパートナーとして信頼され続けています。</p>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section id="reviews" class="customer-reviews">
+        <h2>お客様の声</h2>
+        <p class="review">「LYCorpの支援のおかげで、私たちのビジネスは短期間で急成長しました。確かな成果を実感しています。」 - A社</p>
+        <p class="review">「最先端のソリューションを提供してくれるLYCorpと共に、業務効率が飛躍的に向上しました。」 - B社</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 LYCorp. All rights reserved.</p>
+        <p><a href="#contact">お問い合わせ</a> | <a href="#">プライバシーポリシー</a></p>
+    </footer>
+
+</body>
+</html>
