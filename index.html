@@ -3,254 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>税理士事務所 | 信頼のサービス</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Playfair+Display&display=swap" rel="stylesheet">
+    <title>税理士事務所のホームページ</title>
     <style>
-        * {
+        /* 全体の背景と文字色 */
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            background: url('https://media.istockphoto.com/id/1461586589/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E4%BC%9A%E8%AD%B0%E3%81%A7%E8%AA%AC%E6%98%8E%E3%82%92%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%E6%89%8B.jpg?s=612x612&w=0&k=20&c=lO7fJR9rgepMtsWrv-Xr3F38HV2HSFyfu2nax7LpN8U=') no-repeat center center/cover; /* 背景画像 */
+            color: white; /* デフォルトのテキストカラーを白に */
         }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #f7f7f7;
-            line-height: 1.6;
-        }
-
-        /* Header */
+        /* ヘッダー */
         header {
-            background-color: #003366; /* ダークブルー */
-            padding: 20px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
+            background: #00C300; /* LINEの緑色 */
+            padding: 10px;
         }
 
         header nav ul {
+            list-style: none;
             display: flex;
             justify-content: center;
-            list-style: none;
-            margin-top: 10px;
+            gap: 20px;
         }
 
         header nav a {
-            color: #fff;
+            color: white;
             text-decoration: none;
-            padding: 12px 25px;
             font-size: 18px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
         }
 
-        header nav a:hover {
-            background-color: #ffcc00;
-        }
-
-        /* Hero Section */
+        /* メインの紹介部分 */
         .hero {
-            height: 100vh;
-            background: url('https://media.istockphoto.com/id/1461586589/ja/%E3%82%B9%E3%83%88%E3%83%83%E3%82%AF%E3%83%95%E3%82%A9%E3%83%88/%E4%BC%9A%E8%AD%B0%E3%81%A7%E8%AA%AC%E6%98%8E%E3%82%92%E3%81%99%E3%82%8B%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%82%A6%E3%83%BC%E3%83%9E%E3%83%B3%E3%81%AE%E6%89%8B.jpg?s=612x612&w=0&k=20&c=lO7fJR9rgepMtsWrv-Xr3F38HV2HSFyfu2nax7LpN8U=') no-repeat center center/cover; /* 画像URLを入れてください */
-            color: #fff;
+            color: white;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-top: 100px; /* 固定ナビゲーションのオフセット */
-        }
-
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            width: 60%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 30px;
-        }
-
-        .cta-button {
-            background-color: #ffcc00;
-            color: #003366;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: 500;
-            transition: background-color 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background-color: #e6b800;
-        }
-
-        /* Service Section */
-        section.services {
-            background-color: #fff;
-            padding: 60px 10%;
-            text-align: center;
-        }
-
-        section.services h2 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        section.services p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            max-width: 900px;
+            padding: 50px 0;
+            background-color: rgba(0, 0, 0, 0.5); /* 半透明の背景を追加 */
+            border-radius: 10px;
+            max-width: 800px;
             margin: 0 auto;
         }
 
-        .service-card {
-            margin-top: 40px;
-            background-color: #f4f4f4;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-            transition: box-shadow 0.3s ease;
-        }
-
-        .service-card:hover {
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .service-card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 1rem;
-            color: #555;
-        }
-
-        /* Customer Reviews Section */
-        .customer-reviews {
-            background-color: #003366;
-            color: #fff;
-            padding: 60px 10%;
-            text-align: center;
-        }
-
-        .customer-reviews h2 {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .review {
-            margin-bottom: 20px;
-            font-style: italic;
-            font-size: 1.2rem;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 40px 0;
-        }
-
-        footer a {
-            color: #ffcc00;
+        /* CTAボタンのスタイル */
+        .cta-button {
+            background: #003366; /* 濃い紺色 */
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
             text-decoration: none;
-            font-weight: 500;
-        }
-
-        footer p {
+            display: inline-block;
             margin-top: 20px;
+            border-radius: 5px;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header nav ul {
-                flex-direction: column;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .cta-button {
-                font-size: 16px;
-            }
-
-            section.services {
-                padding: 80px 5%;
-            }
+        .cta-button:hover {
+            background: #002244; /* さらに濃い紺色に変化 */
         }
+
+        /* セクションのスタイル */
+        .sample-read, .user-reviews, .special-offers, .purchase-section {
+            padding: 40px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* 背景を半透明にして視認性を高める */
+            border-radius: 10px;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        /* フッター */
+        footer {
+            background: #00C300; /* LINE緑色 */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">ホーム</a></li>
-                <li><a href="#services">サービス</a></li>
-                <li><a href="#reviews">お客様の声</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <nav>
+        <ul>
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#">サービス</a></li>
+            <li><a href="#">お問い合わせ</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1>信頼の税理士事務所へようこそ</h1>
-        <p>私たちの専門知識と経験を活かし、あなたのビジネスをサポートします。</p>
-        <a href="#services" class="cta-button">サービスを見る</a>
-    </section>
+<div class="hero">
+    <h1>信頼の税理士事務所へようこそ</h1>
+    <p>私たちの専門知識と経験を活かし、あなたのビジネスをサポートします。</p>
+    <a href="#" class="cta-button">今すぐ無料相談</a>
+</div>
 
-    <!-- Service Section -->
-    <section id="services" class="services">
-        <h2>提供するサービス</h2>
-        <p>私たちは、税務顧問から会計業務、事業承継サポートに至るまで、幅広いサービスを提供しています。どのようなご要望にも柔軟に対応し、最適なアドバイスを行います。</p>
+<div class="sample-read">
+    <h2>サービス紹介</h2>
+    <p>私たちの税理士事務所が提供する専門的なサービスをご紹介します。</p>
+</div>
 
-        <div class="service-card">
-            <h3>税務顧問サービス</h3>
-            <p>税務の最新情報を元に、最適な納税戦略を提供します。事業主様の税務負担を軽減します。</p>
-        </div>
+<div class="user-reviews">
+    <h2>お客様の声</h2>
+    <p>多くのお客様に信頼され、感謝されています。</p>
+</div>
 
-        <div class="service-card">
-            <h3>会計業務サポート</h3>
-            <p>正確な記帳代行と会計業務で、ビジネスの健康を守ります。透明性の高い経営が可能に。</p>
-        </div>
+<div class="special-offers">
+    <h2>特別オファー</h2>
+    <p>今だけの特別キャンペーンをチェック!</p>
+</div>
 
-        <div class="service-card">
-            <h3>事業承継アドバイザリー</h3>
-            <p>後継者育成や事業承継計画作成を支援。将来の事業の安定的な運営をお手伝いします。</p>
-        </div>
-    </section>
+<div class="purchase-section">
+    <h2>サービスを購入する</h2>
+    <p>ビジネスの成長をサポートするために、今すぐサービスを購入してください。</p>
+    <a href="#" class="cta-button">購入する</a>
+</div>
 
-    <!-- Customer Reviews Section -->
-    <section id="reviews" class="customer-reviews">
-        <h2>お客様の声</h2>
-        <p class="review">「LY税理士事務所のサポートにより、税務問題が迅速に解決しました。今後ともお願いしたいです。」 - A社</p>
-        <p class="review">「信頼できるアドバイザーとして、事業計画の立て直しをサポートしていただきました。」 - B社</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 LY税理士事務所. All rights reserved.</p>
-        <p><a href="#contact">お問い合わせ</a> | <a href="#">プライバシーポリシー</a></p>
-    </footer>
+<footer>
+    <p>© 2025 税理士事務所</p>
+</footer>
 
 </body>
 </html>
